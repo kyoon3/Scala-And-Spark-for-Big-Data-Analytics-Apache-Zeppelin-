@@ -1,0 +1,1549 @@
+{
+  "paragraphs": [
+    {
+      "text": "\nval statesDF \u003d spark.read.option(\"header\", \"true\").option(\"inferschema\", \"true\").option(\"sep\",\",\").csv(\"../data/statesPopulation.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:31:49.410",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "statesDF: org.apache.spark.sql.DataFrame \u003d [State: string, Year: int ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579749960051_-1285278489",
+      "id": "20200123-122600_1537817767",
+      "dateCreated": "2020-01-23 12:26:00.051",
+      "dateStarted": "2020-01-23 12:31:49.429",
+      "dateFinished": "2020-01-23 12:31:51.706",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:32:17.145",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- State: string (nullable \u003d true)\n |-- Year: integer (nullable \u003d true)\n |-- Population: integer (nullable \u003d true)\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750000960_1913121535",
+      "id": "20200123-122640_1309035337",
+      "dateCreated": "2020-01-23 12:26:40.960",
+      "dateStarted": "2020-01-23 12:32:17.166",
+      "dateFinished": "2020-01-23 12:32:17.382",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.explain(true)\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:32:56.842",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003d\u003d Parsed Logical Plan \u003d\u003d\nRelation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Analyzed Logical Plan \u003d\u003d\nState: string, Year: int, Population: int\nRelation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Optimized Logical Plan \u003d\u003d\nRelation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Physical Plan \u003d\u003d\n*FileScan csv [State#12,Year#13,Population#14] Batched: false, Format: CSV, Location: InMemoryFileIndex[file:/C:/Users/kyoon.DESKTOP-SGLQV8P/Downloads/zeppelin-0.8.2-bin-all/zeppelin-..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct\u003cState:string,Year:int,Population:int\u003e\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750325841_589248461",
+      "id": "20200123-123205_2115580782",
+      "dateCreated": "2020-01-23 12:32:05.841",
+      "dateStarted": "2020-01-23 12:32:56.866",
+      "dateFinished": "2020-01-23 12:32:57.400",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.createOrReplaceTempView(\"states\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:33:24.000",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750376842_-779936475",
+      "id": "20200123-123256_1835961344",
+      "dateCreated": "2020-01-23 12:32:56.842",
+      "dateStarted": "2020-01-23 12:33:24.026",
+      "dateFinished": "2020-01-23 12:33:24.285",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.show()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:33:31.816",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+--------------------+----+----------+\n|               State|Year|Population|\n+--------------------+----+----------+\n|             Alabama|2010|   4785492|\n|              Alaska|2010|    714031|\n|             Arizona|2010|   6408312|\n|            Arkansas|2010|   2921995|\n|          California|2010|  37332685|\n|            Colorado|2010|   5048644|\n|            Delaware|2010|    899816|\n|District of Columbia|2010|    605183|\n|             Florida|2010|  18849098|\n|             Georgia|2010|   9713521|\n|              Hawaii|2010|   1363945|\n|               Idaho|2010|   1571010|\n|            Illinois|2010|  12841578|\n|             Indiana|2010|   6490528|\n|                Iowa|2010|   3050738|\n|              Kansas|2010|   2858850|\n|            Kentucky|2010|   4348662|\n|           Louisiana|2010|   4544996|\n|               Maine|2010|   1327730|\n|            Maryland|2010|   5788584|\n+--------------------+----+----------+\nonly showing top 20 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750404000_1138212989",
+      "id": "20200123-123324_1698883999",
+      "dateCreated": "2020-01-23 12:33:24.000",
+      "dateStarted": "2020-01-23 12:33:31.841",
+      "dateFinished": "2020-01-23 12:33:32.339",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect * from states limit 5",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:34:46.873",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "Year": "string",
+                      "Population": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "State",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "Year",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tYear\tPopulation\nAlabama\t2010\t4785492\nAlaska\t2010\t714031\nArizona\t2010\t6408312\nArkansas\t2010\t2921995\nCalifornia\t2010\t37332685\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750411816_242586059",
+      "id": "20200123-123331_879231685",
+      "dateCreated": "2020-01-23 12:33:31.816",
+      "dateStarted": "2020-01-23 12:34:19.769",
+      "dateFinished": "2020-01-23 12:34:19.943",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.sort(col(\"Population\").desc).show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:35:15.801",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+----+----------+\n|     State|Year|Population|\n+----------+----+----------+\n|California|2016|  39250017|\n|California|2015|  38993940|\n|California|2014|  38680810|\n|California|2013|  38335203|\n|California|2012|  38011074|\n+----------+----+----------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750459731_514803866",
+      "id": "20200123-123419_1172750765",
+      "dateCreated": "2020-01-23 12:34:19.731",
+      "dateStarted": "2020-01-23 12:35:15.828",
+      "dateFinished": "2020-01-23 12:35:16.567",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect * from states\norder by Population\ndesc limit 5\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:36:12.137",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "Year": "string",
+                      "Population": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tYear\tPopulation\nCalifornia\t2016\t39250017\nCalifornia\t2015\t38993940\nCalifornia\t2014\t38680810\nCalifornia\t2013\t38335203\nCalifornia\t2012\t38011074\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750515801_-2101079600",
+      "id": "20200123-123515_1073839148",
+      "dateCreated": "2020-01-23 12:35:15.801",
+      "dateStarted": "2020-01-23 12:36:11.366",
+      "dateFinished": "2020-01-23 12:36:11.575",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\").sum(\"Population\").show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:36:54.659",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+---------------+\n|    State|sum(Population)|\n+---------+---------------+\n|     Utah|       20333580|\n|   Hawaii|        9810173|\n|Minnesota|       37914011|\n|     Ohio|       81020539|\n| Arkansas|       20703849|\n+---------+---------------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750571320_583123000",
+      "id": "20200123-123611_1805935666",
+      "dateCreated": "2020-01-23 12:36:11.320",
+      "dateStarted": "2020-01-23 12:36:54.693",
+      "dateFinished": "2020-01-23 12:36:56.878",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect State, sum(Population) from states\ngroup by State\nlimit 5",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:37:50.710",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "sum(Population)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tsum(Population)\nUtah\t20333580\nHawaii\t9810173\nMinnesota\t37914011\nOhio\t81020539\nArkansas\t20703849\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750614659_878061642",
+      "id": "20200123-123654_1223911220",
+      "dateCreated": "2020-01-23 12:36:54.659",
+      "dateStarted": "2020-01-23 12:37:49.447",
+      "dateFinished": "2020-01-23 12:37:50.068",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\").agg(sum(\"Population\").alias(\"Total\")).show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:38:40.439",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+--------+\n|    State|   Total|\n+---------+--------+\n|     Utah|20333580|\n|   Hawaii| 9810173|\n|Minnesota|37914011|\n|     Ohio|81020539|\n| Arkansas|20703849|\n+---------+--------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750669416_816739810",
+      "id": "20200123-123749_2113861328",
+      "dateCreated": "2020-01-23 12:37:49.416",
+      "dateStarted": "2020-01-23 12:38:40.464",
+      "dateFinished": "2020-01-23 12:38:41.211",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect State, sum(Population) as Total\nfrom states\ngroup by State\nlimit 5",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:39:27.225",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "Total": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tTotal\nUtah\t20333580\nHawaii\t9810173\nMinnesota\t37914011\nOhio\t81020539\nArkansas\t20703849\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750707880_1180801357",
+      "id": "20200123-123827_2112199331",
+      "dateCreated": "2020-01-23 12:38:27.880",
+      "dateStarted": "2020-01-23 12:39:26.236",
+      "dateFinished": "2020-01-23 12:39:26.640",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\").agg(sum(\"Population\").alias(\"Total\")).explain(true)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:40:32.735",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003d\u003d Parsed Logical Plan \u003d\u003d\n\u0027Aggregate [State#12], [State#12, sum(\u0027Population) AS Total#127]\n+- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Analyzed Logical Plan \u003d\u003d\nState: string, Total: bigint\nAggregate [State#12], [State#12, sum(cast(Population#14 as bigint)) AS Total#127L]\n+- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Optimized Logical Plan \u003d\u003d\nAggregate [State#12], [State#12, sum(cast(Population#14 as bigint)) AS Total#127L]\n+- Project [State#12, Population#14]\n   +- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Physical Plan \u003d\u003d\n*HashAggregate(keys\u003d[State#12], functions\u003d[sum(cast(Population#14 as bigint))], output\u003d[State#12, Total#127L])\n+- Exchange hashpartitioning(State#12, 200)\n   +- *HashAggregate(keys\u003d[State#12], functions\u003d[partial_sum(cast(Population#14 as bigint))], output\u003d[State#12, sum#133L])\n      +- *FileScan csv [State#12,Population#14] Batched: false, Format: CSV, Location: InMemoryFileIndex[file:/C:/Users/kyoon.DESKTOP-SGLQV8P/Downloads/zeppelin-0.8.2-bin-all/zeppelin-..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct\u003cState:string,Population:int\u003e\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750766208_622415034",
+      "id": "20200123-123926_956267151",
+      "dateCreated": "2020-01-23 12:39:26.208",
+      "dateStarted": "2020-01-23 12:40:32.759",
+      "dateFinished": "2020-01-23 12:40:33.027",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\").agg(sum(\"Population\").alias(\"Total\")).sort(col(\"Total\").desc).show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:41:10.351",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+---------+\n|     State|    Total|\n+----------+---------+\n|California|268280590|\n|     Texas|185672865|\n|   Florida|137618322|\n|  New York|137409471|\n|  Illinois| 89960023|\n+----------+---------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750824015_615987732",
+      "id": "20200123-124024_902459869",
+      "dateCreated": "2020-01-23 12:40:24.015",
+      "dateStarted": "2020-01-23 12:41:10.387",
+      "dateFinished": "2020-01-23 12:41:11.689",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect State, sum(Population) as Total\nfrom states\ngroup by State\norder by Total\ndesc limit 5",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:42:05.131",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "Total": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tTotal\nCalifornia\t268280590\nTexas\t185672865\nFlorida\t137618322\nNew York\t137409471\nIllinois\t89960023\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750870351_1926286867",
+      "id": "20200123-124110_1635974792",
+      "dateCreated": "2020-01-23 12:41:10.351",
+      "dateStarted": "2020-01-23 12:42:03.502",
+      "dateFinished": "2020-01-23 12:42:04.465",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\").agg(\n        min(\"Population\").alias(\"minTotal\"),\n        max(\"Population\").alias(\"maxTotal\"),\n        avg(\"Population\").alias(\"avgTotal\"))\n      .sort(col(\"minTotal\").desc).show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:43:49.751",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+--------+--------+--------------------+\n|     State|minTotal|maxTotal|            avgTotal|\n+----------+--------+--------+--------------------+\n|California|37332685|39250017|3.8325798571428575E7|\n|     Texas|25244310|27862596|         2.6524695E7|\n|  New York|19402640|19747183| 1.962992442857143E7|\n|   Florida|18849098|20612439|1.9659760285714287E7|\n|  Illinois|12801539|12879505|1.2851431857142856E7|\n+----------+--------+--------+--------------------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579750923474_-1241083002",
+      "id": "20200123-124203_777569733",
+      "dateCreated": "2020-01-23 12:42:03.474",
+      "dateStarted": "2020-01-23 12:43:49.779",
+      "dateFinished": "2020-01-23 12:43:51.262",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect State, min(Population) as minTotal, \n       max(Population) as maxTotal, avg(Population) as avgTotal \nfrom states\ngroup by State\norder by minTotal\ndesc limit 5",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:45:33.030",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "State": "string",
+                      "minTotal": "string",
+                      "maxTotal": "string",
+                      "avgTotal": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "State\tminTotal\tmaxTotal\tavgTotal\nCalifornia\t37332685\t39250017\t3.8325798571428575E7\nTexas\t25244310\t27862596\t2.6524695E7\nNew York\t19402640\t19747183\t1.962992442857143E7\nFlorida\t18849098\t20612439\t1.9659760285714287E7\nIllinois\t12801539\t12879505\t1.2851431857142856E7\n"
+          },
+          {
+            "type": "TEXT",
+            "data": ""
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751029751_-44911214",
+      "id": "20200123-124349_958174431",
+      "dateCreated": "2020-01-23 12:43:49.751",
+      "dateStarted": "2020-01-23 12:45:31.316",
+      "dateFinished": "2020-01-23 12:45:32.228",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.groupBy(\"State\")\n        .pivot(\"Year\")\n        .sum(\"Population\")\n        .show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:46:08.453",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---------+--------+--------+--------+--------+--------+--------+--------+\n|    State|    2010|    2011|    2012|    2013|    2014|    2015|    2016|\n+---------+--------+--------+--------+--------+--------+--------+--------+\n|     Utah| 2775326| 2816124| 2855782| 2902663| 2941836| 2990632| 3051217|\n|   Hawaii| 1363945| 1377864| 1391820| 1406481| 1416349| 1425157| 1428557|\n|Minnesota| 5311147| 5348562| 5380285| 5418521| 5453109| 5482435| 5519952|\n|     Ohio|11540983|11544824|11550839|11570022|11594408|11605090|11614373|\n| Arkansas| 2921995| 2939493| 2950685| 2958663| 2966912| 2977853| 2988248|\n+---------+--------+--------+--------+--------+--------+--------+--------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751131285_-1868066906",
+      "id": "20200123-124531_447226266",
+      "dateCreated": "2020-01-23 12:45:31.285",
+      "dateStarted": "2020-01-23 12:46:08.484",
+      "dateFinished": "2020-01-23 12:46:19.846",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.filter(\"State \u003d\u003d \u0027California\u0027\")\n        .explain(true)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:49:01.278",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003d\u003d Parsed Logical Plan \u003d\u003d\n\u0027Filter (\u0027State \u003d Califonia)\n+- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Analyzed Logical Plan \u003d\u003d\nState: string, Year: int, Population: int\nFilter (State#12 \u003d Califonia)\n+- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Optimized Logical Plan \u003d\u003d\nFilter (isnotnull(State#12) \u0026\u0026 (State#12 \u003d Califonia))\n+- Relation[State#12,Year#13,Population#14] csv\n\n\u003d\u003d Physical Plan \u003d\u003d\n*Project [State#12, Year#13, Population#14]\n+- *Filter (isnotnull(State#12) \u0026\u0026 (State#12 \u003d Califonia))\n   +- *FileScan csv [State#12,Year#13,Population#14] Batched: false, Format: CSV, Location: InMemoryFileIndex[file:/C:/Users/kyoon.DESKTOP-SGLQV8P/Downloads/zeppelin-0.8.2-bin-all/zeppelin-..., PartitionFilters: [], PushedFilters: [IsNotNull(State), EqualTo(State,Califonia)], ReadSchema: struct\u003cState:string,Year:int,Population:int\u003e\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751168453_-1064469361",
+      "id": "20200123-124608_1799676491",
+      "dateCreated": "2020-01-23 12:46:08.454",
+      "dateStarted": "2020-01-23 12:48:26.259",
+      "dateFinished": "2020-01-23 12:48:26.420",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.filter(\"State \u003d\u003d \u0027California\u0027\")\n        .show",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:49:03.244",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+----+----------+\n|     State|Year|Population|\n+----------+----+----------+\n|California|2010|  37332685|\n|California|2011|  37676861|\n|California|2012|  38011074|\n|California|2013|  38335203|\n|California|2014|  38680810|\n|California|2015|  38993940|\n|California|2016|  39250017|\n+----------+----+----------+\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751215614_-1127599388",
+      "id": "20200123-124655_52280329",
+      "dateCreated": "2020-01-23 12:46:55.614",
+      "dateStarted": "2020-01-23 12:49:03.269",
+      "dateFinished": "2020-01-23 12:49:03.445",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import org.apache.spark.sql.functions._\n\nval toUpper: String \u003d\u003e String \u003d _.toUpperCase",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:49:43.061",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.functions._\r\ntoUpper: String \u003d\u003e String \u003d \u003cfunction1\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751254757_-363530908",
+      "id": "20200123-124734_269329876",
+      "dateCreated": "2020-01-23 12:47:34.757",
+      "dateStarted": "2020-01-23 12:49:43.091",
+      "dateFinished": "2020-01-23 12:49:43.392",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val toUpperUDF \u003d udf(toUpper)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:50:01.205",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "toUpperUDF: org.apache.spark.sql.expressions.UserDefinedFunction \u003d UserDefinedFunction(\u003cfunction1\u003e,StringType,Some(List(StringType)))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751383061_-383868215",
+      "id": "20200123-124943_1267543403",
+      "dateCreated": "2020-01-23 12:49:43.061",
+      "dateStarted": "2020-01-23 12:50:01.231",
+      "dateFinished": "2020-01-23 12:50:01.780",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.withColumn(\"StateUpperCase\", toUpperUDF(col(\"State\"))).show(5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:50:42.596",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+----+----------+--------------+\n|     State|Year|Population|StateUpperCase|\n+----------+----+----------+--------------+\n|   Alabama|2010|   4785492|       ALABAMA|\n|    Alaska|2010|    714031|        ALASKA|\n|   Arizona|2010|   6408312|       ARIZONA|\n|  Arkansas|2010|   2921995|      ARKANSAS|\n|California|2010|  37332685|    CALIFORNIA|\n+----------+----+----------+--------------+\nonly showing top 5 rows\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751395188_516298402",
+      "id": "20200123-124955_910305067",
+      "dateCreated": "2020-01-23 12:49:55.188",
+      "dateStarted": "2020-01-23 12:50:42.629",
+      "dateFinished": "2020-01-23 12:50:43.027",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val statesDF \u003d spark.read.option(\"header\", \"true\")\n                         .option(\"inferschema\", \"true\")\n                         .option(\"sep\",\",\")\n                         .csv(\"../data/statesPopulation.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:51:31.709",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "statesDF: org.apache.spark.sql.DataFrame \u003d [State: string, Year: int ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751442596_1443122563",
+      "id": "20200123-125042_802618088",
+      "dateCreated": "2020-01-23 12:50:42.596",
+      "dateStarted": "2020-01-23 12:51:31.744",
+      "dateFinished": "2020-01-23 12:51:32.076",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.schema",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:51:46.741",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res25: org.apache.spark.sql.types.StructType \u003d StructType(StructField(State,StringType,true), StructField(Year,IntegerType,true), StructField(Population,IntegerType,true))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751491709_1346026339",
+      "id": "20200123-125131_1801883072",
+      "dateCreated": "2020-01-23 12:51:31.709",
+      "dateStarted": "2020-01-23 12:51:37.383",
+      "dateFinished": "2020-01-23 12:51:37.645",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "statesDF.printSchema",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:51:56.092",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- State: string (nullable \u003d true)\n |-- Year: integer (nullable \u003d true)\n |-- Population: integer (nullable \u003d true)\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751497348_682022840",
+      "id": "20200123-125137_2088285781",
+      "dateCreated": "2020-01-23 12:51:37.348",
+      "dateStarted": "2020-01-23 12:51:56.128",
+      "dateFinished": "2020-01-23 12:51:56.301",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import org.apache.spark.sql.types.{StructType, IntegerType, StringType}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:52:33.436",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.types.{StructType, IntegerType, StringType}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751516092_1553845142",
+      "id": "20200123-125156_1649320157",
+      "dateCreated": "2020-01-23 12:51:56.092",
+      "dateStarted": "2020-01-23 12:52:33.469",
+      "dateFinished": "2020-01-23 12:52:33.625",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val schema \u003d new StructType().add(\"i\", IntegerType)\n                             .add(\"s\", StringType)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:53:15.540",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "schema: org.apache.spark.sql.types.StructType \u003d StructType(StructField(i,IntegerType,true), StructField(s,StringType,true))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751553436_745896691",
+      "id": "20200123-125233_166088090",
+      "dateCreated": "2020-01-23 12:52:33.436",
+      "dateStarted": "2020-01-23 12:53:15.585",
+      "dateFinished": "2020-01-23 12:53:15.827",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "schema.printTreeString",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:53:28.028",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- i: integer (nullable \u003d true)\n |-- s: string (nullable \u003d true)\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751595540_1313970090",
+      "id": "20200123-125315_1330485383",
+      "dateCreated": "2020-01-23 12:53:15.540",
+      "dateStarted": "2020-01-23 12:53:28.065",
+      "dateFinished": "2020-01-23 12:53:28.273",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "schema.prettyJson",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:53:41.795",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res28: String \u003d\r\n{\r\n  \"type\" : \"struct\",\r\n  \"fields\" : [ {\r\n    \"name\" : \"i\",\r\n    \"type\" : \"integer\",\r\n    \"nullable\" : true,\r\n    \"metadata\" : { }\r\n  }, {\r\n    \"name\" : \"s\",\r\n    \"type\" : \"string\",\r\n    \"nullable\" : true,\r\n    \"metadata\" : { }\r\n  } ]\r\n}\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751608028_-613438284",
+      "id": "20200123-125328_2084295704",
+      "dateCreated": "2020-01-23 12:53:28.028",
+      "dateStarted": "2020-01-23 12:53:41.832",
+      "dateFinished": "2020-01-23 12:53:42.087",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import org.apache.spark.sql.Encoders",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:54:02.692",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.apache.spark.sql.Encoders\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751621795_1106526772",
+      "id": "20200123-125341_1623362130",
+      "dateCreated": "2020-01-23 12:53:41.795",
+      "dateStarted": "2020-01-23 12:54:02.726",
+      "dateFinished": "2020-01-23 12:54:02.897",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Encoders.product[(Integer,String)]\n        .schema\n        .printTreeString",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:54:54.587",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "root\n |-- _1: integer (nullable \u003d true)\n |-- _2: string (nullable \u003d true)\n\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751642692_955290938",
+      "id": "20200123-125402_341001233",
+      "dateCreated": "2020-01-23 12:54:02.692",
+      "dateStarted": "2020-01-23 12:54:54.619",
+      "dateFinished": "2020-01-23 12:54:54.891",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "case class Record(i: Integer, s: String)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:55:14.956",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "defined class Record\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751673867_-2049529681",
+      "id": "20200123-125433_1131785912",
+      "dateCreated": "2020-01-23 12:54:33.867",
+      "dateStarted": "2020-01-23 12:55:15.001",
+      "dateFinished": "2020-01-23 12:55:15.623",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Encoders.product[Record.]",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-23 12:55:31.202",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579751714956_1856394871",
+      "id": "20200123-125514_104695901",
+      "dateCreated": "2020-01-23 12:55:14.956",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala and Spark for Big Data Analytics/chap8",
+  "id": "2EYM55QJ3",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}

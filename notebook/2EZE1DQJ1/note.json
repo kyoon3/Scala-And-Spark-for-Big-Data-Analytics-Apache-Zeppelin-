@@ -1,0 +1,87 @@
+{
+  "paragraphs": [
+    {
+      "text": "val numbers: Array[Int] \u003d Array[Int](1,2,3,4,5,1,2,3,4,5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 20:10:44.584",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579579734069_390928584",
+      "id": "20200120-200854_1144645653",
+      "dateCreated": "2020-01-20 20:08:54.069",
+      "status": "PENDING",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val numbers: Array[Int] \u003d Array[Int](1,2,3,4,5,1,2,3,4,5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-20 20:14:12.951",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579579767032_-1693222228",
+      "id": "20200120-200927_1498689290",
+      "dateCreated": "2020-01-20 20:09:27.032",
+      "status": "ABORT",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579579786352_284259844",
+      "id": "20200120-200946_1110806276",
+      "dateCreated": "2020-01-20 20:09:46.352",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "/ScalaAndSparkForBigData/Chap4",
+  "id": "2EZE1DQJ1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "simple",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}

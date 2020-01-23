@@ -1,0 +1,158 @@
+{
+  "paragraphs": [
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579493356633_1742306818",
+      "id": "20200119-200916_10555926",
+      "dateCreated": "2020-01-19 20:09:16.633",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import org.deeplearning4j.arbiter.util.ClassPathResource;\nimport org.deeplearning4j.nn.modelimport.keras.KerasModelImport;\nimport org.deeplearning4j.nn.multilayer.MultiLayerNetwork;\nimport org.nd4j.linalg.factory.Nd4j;\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;\nimport org.apache.commons.io.FileUtils;\nimport org.apache.commons.io.FilenameUtils;\nimport org.deeplearning4j.nn.graph.ComputationGraph;\nimport org.deeplearning4j.nn.modelimport.keras.KerasLayer;\nimport org.deeplearning4j.nn.modelimport.keras.KerasModelImport;\nimport org.nd4j.linalg.api.ndarray.INDArray;\nimport org.nd4j.linalg.factory.Nd4j;\nimport java.io.File;\nimport java.net.URL;\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 21:20:23.542",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import org.deeplearning4j.arbiter.util.ClassPathResource\nimport org.deeplearning4j.nn.modelimport.keras.KerasModelImport\nimport org.deeplearning4j.nn.multilayer.MultiLayerNetwork\nimport org.nd4j.linalg.factory.Nd4j\nimport org.slf4j.Logger\nimport org.slf4j.LoggerFactory\nimport org.apache.commons.io.FileUtils\nimport org.apache.commons.io.FilenameUtils\nimport org.deeplearning4j.nn.graph.ComputationGraph\nimport org.deeplearning4j.nn.modelimport.keras.KerasLayer\nimport org.deeplearning4j.nn.modelimport.keras.KerasModelImport\nimport org.nd4j.linalg.api.ndarray.INDArray\nimport org.nd4j.linalg.factory.Nd4j\nimport java.io.File\nimport java.net.URL\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579494043124_-1799178392",
+      "id": "20200119-202043_1487108857",
+      "dateCreated": "2020-01-19 20:20:43.124",
+      "dateStarted": "2020-01-19 21:20:23.570",
+      "dateFinished": "2020-01-19 21:20:42.090",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "object MASICimport {\n     //Read .h5 model at the path And Return the Sequential model and Weight\n    def ReadModel(Model_Address: String){\n        model \u003d KerasModelImport.importKerasSequentialModelAndWeights(Model_Address)\n        model\n    }\n    //ReadCSVData from Data Location NormalizerMinMaxScaler(double minRange, double maxRange) \n    def ReadCSVData(Data_Address: String){\n        val df \u003d spark.read.csv(Data_Address)\n        df\n    }\n    def ReadAndPreProcess(min: Double, max: Double, Data: String \u003d\u003e AnyVal)\n    def main(args: Array[String]) {\n        val GweonModel \u003d \"/home/kyoung/GweonModel/IsotopeDeepLearning.h5\"; //Path of Model To Import\n        val model \u003d KerasModelImport.importKerasSequentialModelAndWeights(GweonModel);\n        val input \u003d Nd4j.create(1, 13);\n        input.add(1213.70);\n        input.add(10000);\n        input.add(6433);\n        input.add(2162);\n        input.add(561);\n        input.add(141);\n        input.add(0);\n        input.add(0);\n        input.add(0);\n        input.add(0);\n        input.add(0);\n        input.add(0);\n        input.add(0);\n        val output \u003d model.output(input);\n        model.fit(input, output);\n    }\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 23:29:41.204",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:43: error: not found: value model\n               model \u003d KerasModelImport.importKerasSequentialModelAndWeights(Model_Address)\n               ^\n\u003cconsole\u003e:44: error: not found: value model\n               model\n               ^\n\u003cconsole\u003e:49: warning: a pure expression does nothing in statement position; you may be omitting necessary parentheses\n               df\n               ^\n\u003cconsole\u003e:51: error: only classes can have declared but undefined members\n           def ReadAndPreProcess(Data: String \u003d\u003e AnyVal)\n               ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579494050202_-1572107884",
+      "id": "20200119-202050_878288667",
+      "dateCreated": "2020-01-19 20:20:50.202",
+      "dateStarted": "2020-01-19 23:28:16.563",
+      "dateFinished": "2020-01-19 23:28:16.730",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "MASICimport.main(Array(\"3\"))\n",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-19 21:26:17.611",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "jobName": "paragraph_1579496958925_464590167",
+      "id": "20200119-210918_51936962",
+      "dateCreated": "2020-01-19 21:09:18.925",
+      "dateStarted": "2020-01-19 21:26:06.359",
+      "dateFinished": "2020-01-19 21:26:09.367",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579497948399_-1816640197",
+      "id": "20200119-212548_1415359094",
+      "dateCreated": "2020-01-19 21:25:48.399",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "GweonModelImport",
+  "id": "2F1FTNGGJ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {}
+}

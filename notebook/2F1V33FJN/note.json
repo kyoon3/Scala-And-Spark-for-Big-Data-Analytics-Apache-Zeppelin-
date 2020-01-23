@@ -1,0 +1,1629 @@
+{
+  "paragraphs": [
+    {
+      "text": "val numbers: Array[Int] \u003d Array[Int](1,2,3,4,5,1,2,3,3,4,5) // simple Array",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:27.378",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "numbers: Array[Int] \u003d Array(1, 2, 3, 4, 5, 1, 2, 3, 3, 4, 5)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582599175_1396217426",
+      "id": "20200121-135639_514569477",
+      "dateCreated": "2020-01-21 13:56:39.175",
+      "dateStarted": "2020-01-21 14:18:27.410",
+      "dateFinished": "2020-01-21 14:18:27.607",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "println(\"The full array is: \")\nfor( i \u003c- numbers){\n    print(\" \" + i)\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:27.627",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "The full array is: \r\n 1 2 3 4 5 1 2 3 3 4 5"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582650199_-311758792",
+      "id": "20200121-135730_957143426",
+      "dateCreated": "2020-01-21 13:57:30.199",
+      "dateStarted": "2020-01-21 14:18:27.671",
+      "dateFinished": "2020-01-21 14:18:27.887",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "println(numbers(2))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:27.896",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "3\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582725314_377775888",
+      "id": "20200121-135845_467023950",
+      "dateCreated": "2020-01-21 13:58:45.314",
+      "dateStarted": "2020-01-21 14:18:27.930",
+      "dateFinished": "2020-01-21 14:18:28.086",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var total \u003d 0\nfor ( i \u003c- 0 to (numbers.length - 1)){\n    total \u003d total + numbers(i)\n}\nprintln(\"Sum: \u003d \" + total)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:28.151",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Sum: \u003d 33\r\ntotal: Int \u003d 33\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582839769_1194961296",
+      "id": "20200121-140039_2130097582",
+      "dateCreated": "2020-01-21 14:00:39.769",
+      "dateStarted": "2020-01-21 14:18:28.174",
+      "dateFinished": "2020-01-21 14:18:28.385",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var min \u003d numbers(0)\nfor(i \u003c- 1 to (numbers.length - 1)){\n    if (numbers(i) \u003c min) min \u003d numbers(i)\n}\nprintln(\"Min is: \" + min)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:28.389",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Min is: 1\r\nmin: Int \u003d 1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582893880_-408532323",
+      "id": "20200121-140133_793242917",
+      "dateCreated": "2020-01-21 14:01:33.880",
+      "dateStarted": "2020-01-21 14:18:28.451",
+      "dateFinished": "2020-01-21 14:18:28.689",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var max \u003d numbers(0)\nfor (i \u003c- 1 to (numbers.length -1)){\n    if (numbers(i) \u003e max) max \u003d numbers(i)\n}\nprintln(\"Max is: \" + max)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:28.787",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Max is: 5\r\nmax: Int \u003d 5\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579582961744_-1051490615",
+      "id": "20200121-140241_449188433",
+      "dateCreated": "2020-01-21 14:02:41.744",
+      "dateStarted": "2020-01-21 14:18:28.817",
+      "dateFinished": "2020-01-21 14:18:29.007",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var myArray1 \u003d Array.range(5, 20, 2)\nvar myArray2 \u003d Array.range(5,20)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:29.043",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "myArray1: Array[Int] \u003d Array(5, 7, 9, 11, 13, 15, 17, 19)\r\nmyArray2: Array[Int] \u003d Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583015040_419257083",
+      "id": "20200121-140335_1973827820",
+      "dateCreated": "2020-01-21 14:03:35.040",
+      "dateStarted": "2020-01-21 14:18:29.064",
+      "dateFinished": "2020-01-21 14:18:29.211",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Array.range(5,20,1)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:29.278",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res16: Array[Int] \u003d Array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583222719_-227256147",
+      "id": "20200121-140702_1504239473",
+      "dateCreated": "2020-01-21 14:07:02.719",
+      "dateStarted": "2020-01-21 14:18:29.299",
+      "dateFinished": "2020-01-21 14:18:29.427",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "//Print all elements\nfor (x \u003c- myArray1){\n    print(\" \" + x)\n}\nprintln()\nfor (x \u003c- myArray2){\n    print(\" \" + x)\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:29.517",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": " 5 7 9 11 13 15 17 19\r\n 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583569540_-1540892228",
+      "id": "20200121-141249_580567382",
+      "dateCreated": "2020-01-21 14:12:49.540",
+      "dateStarted": "2020-01-21 14:18:29.539",
+      "dateFinished": "2020-01-21 14:18:29.750",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var myArray3 \u003d Array.concat(myArray1, myArray2)\nfor(x \u003c- myArray3 ){\n    print(\" \" + x)\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:29.860",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": " 5 7 9 11 13 15 17 19 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19myArray3: Array[Int] \u003d Array(5, 7, 9, 11, 13, 15, 17, 19, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583705348_1535841006",
+      "id": "20200121-141505_1765676770",
+      "dateCreated": "2020-01-21 14:15:05.348",
+      "dateStarted": "2020-01-21 14:18:29.881",
+      "dateFinished": "2020-01-21 14:18:30.092",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import Array._",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:30.095",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import Array._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583748787_-1167949804",
+      "id": "20200121-141548_620616815",
+      "dateCreated": "2020-01-21 14:15:48.787",
+      "dateStarted": "2020-01-21 14:18:30.138",
+      "dateFinished": "2020-01-21 14:18:30.691",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "var myMatrix \u003d ofDim[Int](4,4)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:30.797",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "myMatrix: Array[Array[Int]] \u003d Array(Array(0, 0, 0, 0), Array(0, 0, 0, 0), Array(0, 0, 0, 0), Array(0, 0, 0, 0))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583777236_-2087735571",
+      "id": "20200121-141617_925205925",
+      "dateCreated": "2020-01-21 14:16:17.236",
+      "dateStarted": "2020-01-21 14:18:30.815",
+      "dateFinished": "2020-01-21 14:18:30.958",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "for(i \u003c- 0 to 3){\n    for(j \u003c-0 to 3){\n        myMatrix(i)(j) \u003d j\n    }\n}\nprintln()",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:31.031",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583806107_403655579",
+      "id": "20200121-141646_981679591",
+      "dateCreated": "2020-01-21 14:16:46.107",
+      "dateStarted": "2020-01-21 14:18:31.052",
+      "dateFinished": "2020-01-21 14:18:31.250",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "for(i \u003c- 0 to 3){\n    for(j \u003c- 0 to 3){\n        print(\" \" + myMatrix(i)(j))\n    }\n    println()\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:18:31.264",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": " 0 1 2 3\r\n 0 1 2 3\r\n 0 1 2 3\r\n 0 1 2 3\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583836442_-1970833871",
+      "id": "20200121-141716_1051102929",
+      "dateCreated": "2020-01-21 14:17:16.442",
+      "dateStarted": "2020-01-21 14:18:31.290",
+      "dateFinished": "2020-01-21 14:18:31.515",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val numbers \u003d List(1,2,3,4,5,1,2,3,4,5) // Check List immutability",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:22:45.491",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala",
+        "lineNumbers": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "numbers: List[Int] \u003d List(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579583868179_-146655385",
+      "id": "20200121-141748_259078093",
+      "dateCreated": "2020-01-21 14:17:48.179",
+      "dateStarted": "2020-01-21 14:22:45.518",
+      "dateFinished": "2020-01-21 14:22:45.752",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "numbers(3) \u003d 10",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:22:52.136",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003cconsole\u003e:32: error: value update is not a member of List[Int]\r\n       numbers(3) \u003d 10\r\n       ^\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579584165491_1532541770",
+      "id": "20200121-142245_1691858267",
+      "dateCreated": "2020-01-21 14:22:45.491",
+      "dateStarted": "2020-01-21 14:22:52.157",
+      "dateFinished": "2020-01-21 14:22:52.199",
+      "status": "ERROR",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val numbers \u003d 1 :: 2 :: 3 :: 4:: 5 :: 1 :: 2 :: 3 :: 4 :: 5 :: Nil",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:23:34.984",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "numbers: List[Int] \u003d List(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579584172136_611594839",
+      "id": "20200121-142252_1334963878",
+      "dateCreated": "2020-01-21 14:22:52.136",
+      "dateStarted": "2020-01-21 14:23:35.010",
+      "dateFinished": "2020-01-21 14:23:35.248",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "object ListExample{ //List example\n    def main(args: Array[String]){\n        //List of cities\n        val cities \u003d \"Dublin\" :: \"London\" :: \"NY\":: Nil\n        \n        //List of nums in even\n        \n        val nums \u003d 2 :: 4 :: 6 :: 8 :: Nil\n        \n        //Empty list\n        \n        val empty \u003d Nil\n        \n        val dim \u003d 1 :: 2 :: 3 :: Nil ::\n                  4 :: 5 :: 6 :: Nil ::\n                  7 :: 8 :: 9 :: Nil :: Nil\n        \n        val temp \u003d Nil\n        \n        //Get the first element in the list\n        \n        println( \"Head of cities : \" + cities.head)\n        \n        //Get the last element in the list\n        \n        println( \"Tail of cities : \" + cities.tail)\n        \n        //Check if cities or temp list is empty\n        println( \"Check if cities is empty : \" + cities.isEmpty)\n        println( \"Check if temp is empty : \" + temp.isEmpty )\n        \n        val citiesEurope \u003d \"Dublin\" :: \"London\" :: \"Berlin\" :: Nil\n        val citiesTurkey \u003d \"Istanbul\" :: \"Ankara\" :: Nil\n        \n        //Use ::: to concat more than two lists\n        var citiesConcatenated \u003d citiesEurope ::: citiesTurkey\n        println(\"citiesEurope ::: citiesTurkey: \" + citiesConcatenated)\n        \n        //Use Concat Method\n        citiesConcatenated \u003d List.concat(citiesEurope, citiesTurkey)\n        println( \"List.concat(citiesEurope, citiesTurkey) : \" + \n                citiesConcatenated)\n    }\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:53:54.759",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "defined object ListExample\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579584214984_42663941",
+      "id": "20200121-142334_1316447194",
+      "dateCreated": "2020-01-21 14:23:34.984",
+      "dateStarted": "2020-01-21 14:53:54.904",
+      "dateFinished": "2020-01-21 14:54:10.508",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "ListExample.main(Array(\"3\")) //Check object ListExample",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:55:06.609",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Head of cities : Dublin\r\nTail of cities : List(London, NY)\r\nCheck if cities is empty : false\r\nCheck if temp is empty : true\r\ncitiesEurope ::: citiesTurkey: List(Dublin, London, Berlin, Istanbul, Ankara)\r\nList.concat(citiesEurope, citiesTurkey) : List(Dublin, London, Berlin, Istanbul, Ankara)\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586059159_-152522031",
+      "id": "20200121-145419_1411425106",
+      "dateCreated": "2020-01-21 14:54:19.159",
+      "dateStarted": "2020-01-21 14:54:42.443",
+      "dateFinished": "2020-01-21 14:54:43.026",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val numbers \u003d Set(1, 2, 3, 4, 5, 1, 2, 3, 4, 5)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 14:55:23.517",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "numbers: scala.collection.immutable.Set[Int] \u003d Set(5, 1, 2, 3, 4)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579585771582_1952179472",
+      "id": "20200121-144931_820517434",
+      "dateCreated": "2020-01-21 14:49:31.582",
+      "dateStarted": "2020-01-21 14:55:23.556",
+      "dateFinished": "2020-01-21 14:55:23.920",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "object SetExample{\n    def main(args: Array[String]) {\n        //정수 타입의 빈 셋 \n        var sInteger : Set[Int] \u003d Set()\n        //짝수 숫자의 셋\n        var sEven : Set[Int] \u003d Set(2,4,8,10)\n        //아니면 다음 구문을 사용할 수 있다.\n        var sEven2 \u003d Set(2,4,8,10)\n        val cities \u003d Set(\"Dublin\" , \"London\", \"NY\")\n        val tempNums: Set[Int] \u003d Set()\n        //head, tail를 찾고 Set이 비어 있으면 확인한다.\n        println( \"Head of cities : \" + cities.head)\n        println( \"Tail of cities : \" + cities.tail)\n        println( \"Check if cities is empty : \" + cities.isEmpty )\n        println( \"Check if tempNums is empty : \" + tempNums.isEmpty )\n        val citiesEurope \u003d Set(\"Dublin\", \"London\", \"NY\")\n        val citiesTurkey \u003d Set(\"Istanbul\", \"Ankara\")\n        //++ 연산자를 이용해 하나로 합친다.\n        var citiesConcatenated \u003d citiesEurope ++ citiesTurkey\n        println( \"citiesEurope ++ citiesTurkey : \" + citiesConcatenated)\n        //또한 메소도로 ++를 사용할 수 있다.\n        citiesConcatenated \u003d citiesEurope.++(citiesTurkey)\n        println( \"citiesEurope.++(citiesTurkey) : \" + citiesConcatenated)\n        //Set의 최대 및 최소 엘리먼트를 찾는다.\n        val evenNumbers \u003d Set(2, 4, 6, 8)\n        //min과 max 메소드를 사용한다.\n        println(\"Minimum element in Set(2,4,6,8) : \" + evenNumbers.min )\n        println(\"Maximum element in Set(2,4,6,8) : \" + evenNumbers.max )\n    }\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:05:03.850",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "defined object SetExample\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586123517_-2048380653",
+      "id": "20200121-145523_488219949",
+      "dateCreated": "2020-01-21 14:55:23.517",
+      "dateStarted": "2020-01-21 15:05:03.886",
+      "dateFinished": "2020-01-21 15:05:04.285",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "SetExample.main(Array(\"3\"))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:05:18.482",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Head of cities : Dublin\r\nTail of cities : Set(London, NY)\r\nCheck if cities is empty : false\r\nCheck if tempNums is empty : true\r\ncitiesEurope ++ citiesTurkey : Set(London, Dublin, Ankara, Istanbul, NY)\r\ncitiesEurope.++(citiesTurkey) : Set(London, Dublin, Ankara, Istanbul, NY)\r\nMinimum element in Set(2,4,6,8) : 2\r\nMaximum element in Set(2,4,6,8) : 8\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586579485_147543253",
+      "id": "20200121-150259_1270875218",
+      "dateCreated": "2020-01-21 15:02:59.485",
+      "dateStarted": "2020-01-21 15:05:18.509",
+      "dateFinished": "2020-01-21 15:05:18.831",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val tuple_1 \u003d (20, \"Hello\", Console)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:05:58.609",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "tuple_1: (Int, String, Console.type) \u003d (20,Hello,scala.Console$@5c276a85)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586713346_-656438105",
+      "id": "20200121-150513_1856117417",
+      "dateCreated": "2020-01-21 15:05:13.346",
+      "dateStarted": "2020-01-21 15:05:58.665",
+      "dateFinished": "2020-01-21 15:05:58.830",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val t \u003d new Tuple3(20, \"Hello\", Console)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:06:14.282",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "t: (Int, String, Console.type) \u003d (20,Hello,scala.Console$@5c276a85)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586758610_427821322",
+      "id": "20200121-150558_1960009439",
+      "dateCreated": "2020-01-21 15:05:58.610",
+      "dateStarted": "2020-01-21 15:06:14.320",
+      "dateFinished": "2020-01-21 15:06:14.456",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val cityPop \u003d (\"Dublin\", 2)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:06:31.794",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "cityPop: (String, Int) \u003d (Dublin,2)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586774282_-534701945",
+      "id": "20200121-150614_1768674075",
+      "dateCreated": "2020-01-21 15:06:14.282",
+      "dateStarted": "2020-01-21 15:06:31.840",
+      "dateFinished": "2020-01-21 15:06:32.147",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "cityPop._1",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:06:44.890",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res5: String \u003d Dublin\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586791794_-1324059579",
+      "id": "20200121-150631_1639063004",
+      "dateCreated": "2020-01-21 15:06:31.794",
+      "dateStarted": "2020-01-21 15:06:44.929",
+      "dateFinished": "2020-01-21 15:06:45.118",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "cityPop._2",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:06:54.994",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res6: Int \u003d 2\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586804890_-1263873155",
+      "id": "20200121-150644_1056733824",
+      "dateCreated": "2020-01-21 15:06:44.890",
+      "dateStarted": "2020-01-21 15:06:55.042",
+      "dateFinished": "2020-01-21 15:06:55.209",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "\"Dublin\" -\u003e 2",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 15:07:40.003",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res7: (String, Int) \u003d (Dublin,2)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586814994_1673723058",
+      "id": "20200121-150654_808278519",
+      "dateCreated": "2020-01-21 15:06:54.994",
+      "dateStarted": "2020-01-21 15:07:40.038",
+      "dateFinished": "2020-01-21 15:07:40.263",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "object TupleExample {\n    def main(args: Array[String]){\n        val evenTuple \u003d (2,4,6,8)\n        val sumTupleElements \u003d evenTuple._1 + evenTuple._2 + evenTuple._3 + evenTuple._4\n        \n        println( \"Sum of Tuple Elements: \" + sumTupleElements )\n        //Foreach 메소드를 사용해 튜플을 순회하고 튜플의 엘리먼트를 출력할 수 있다.\n        evenTuple.productIterator.foreach{\n            evenTuple \u003d\u003e println(\"Vlaue \u003d \" + evenTuple)\n        }\n    }\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:35:37.934",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "defined object TupleExample\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579586860003_-1141871021",
+      "id": "20200121-150740_1526115743",
+      "dateCreated": "2020-01-21 15:07:40.003",
+      "dateStarted": "2020-01-21 16:35:37.976",
+      "dateFinished": "2020-01-21 16:35:38.306",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "TupleExample.main(Array(\"5\"))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:35:57.768",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Sum of Tuple Elements: 20\r\nVlaue \u003d 2\r\nVlaue \u003d 4\r\nVlaue \u003d 6\r\nVlaue \u003d 8\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579587603518_1854707667",
+      "id": "20200121-152003_1123861199",
+      "dateCreated": "2020-01-21 15:20:03.518",
+      "dateStarted": "2020-01-21 16:35:46.504",
+      "dateFinished": "2020-01-21 16:35:46.956",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map(1 -\u003e 2)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:36:04.799",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res5: scala.collection.immutable.Map[Int,Int] \u003d Map(1 -\u003e 2)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579587617013_906156985",
+      "id": "20200121-152017_1048269264",
+      "dateCreated": "2020-01-21 15:20:17.013",
+      "dateStarted": "2020-01-21 16:36:04.847",
+      "dateFinished": "2020-01-21 16:36:05.507",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map(\"X\" -\u003e \"Y\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:36:19.086",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res6: scala.collection.immutable.Map[String,String] \u003d Map(X -\u003e Y)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592164799_1292659171",
+      "id": "20200121-163604_2060130194",
+      "dateCreated": "2020-01-21 16:36:04.800",
+      "dateStarted": "2020-01-21 16:36:19.128",
+      "dateFinished": "2020-01-21 16:36:19.559",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map(2 -\u003e \"two\" , 4 -\u003e \"four\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:37:09.543",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res7: scala.collection.immutable.Map[Int,String] \u003d Map(2 -\u003e two, 4 -\u003e four)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592173126_1334687543",
+      "id": "20200121-163613_1337973074",
+      "dateCreated": "2020-01-21 16:36:13.126",
+      "dateStarted": "2020-01-21 16:37:09.595",
+      "dateFinished": "2020-01-21 16:37:10.103",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map((2,\"two\"), (4,\"four\"))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:37:28.486",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res8: scala.collection.immutable.Map[Int,String] \u003d Map(2 -\u003e two, 4 -\u003e four)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592229543_1668738944",
+      "id": "20200121-163709_1305933896",
+      "dateCreated": "2020-01-21 16:37:09.543",
+      "dateStarted": "2020-01-21 16:37:28.524",
+      "dateFinished": "2020-01-21 16:37:28.821",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import Array._\nvar myArray \u003d range(5, 20, 2)\ndef getMax(): Int \u003d {\n    //가장 큰 엘리먼트를 찾는다.\n    var max \u003d myArray(0)\n    for(i \u003c- 1 to (myArray.length - 1)){\n        if (myArray(i) \u003e max)\n            max \u003d myArray(i)\n    }\n    max\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:39:00.902",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import Array._\r\nmyArray: Array[Int] \u003d Array(5, 7, 9, 11, 13, 15, 17, 19)\r\ngetMax: ()Int\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592248486_365873636",
+      "id": "20200121-163728_1191026619",
+      "dateCreated": "2020-01-21 16:37:28.486",
+      "dateStarted": "2020-01-21 16:39:00.942",
+      "dateFinished": "2020-01-21 16:39:01.921",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val myMax \u003d Map(\"getMax\" -\u003e getMax())",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:39:29.110",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "myMax: scala.collection.immutable.Map[String,Int] \u003d Map(getMax -\u003e 19)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592340902_1867609042",
+      "id": "20200121-163900_1025515737",
+      "dateCreated": "2020-01-21 16:39:00.902",
+      "dateStarted": "2020-01-21 16:39:29.144",
+      "dateFinished": "2020-01-21 16:39:29.423",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "println(\"My max is: \" + myMax)",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:39:48.301",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "My max is: Map(getMax -\u003e 19)\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592363277_1335495713",
+      "id": "20200121-163923_2114294629",
+      "dateCreated": "2020-01-21 16:39:23.277",
+      "dateStarted": "2020-01-21 16:39:48.343",
+      "dateFinished": "2020-01-21 16:39:48.560",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map( 2 -\u003e \"two\", 4 -\u003e \"four\")",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:40:02.382",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res10: scala.collection.immutable.Map[Int,String] \u003d Map(2 -\u003e two, 4 -\u003e four)\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592388301_1153907155",
+      "id": "20200121-163948_313068631",
+      "dateCreated": "2020-01-21 16:39:48.302",
+      "dateStarted": "2020-01-21 16:40:02.424",
+      "dateFinished": "2020-01-21 16:40:02.662",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "Map( 1 -\u003e Map(\"X\"-\u003e\"Y\"))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:40:27.157",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res11: scala.collection.immutable.Map[Int,scala.collection.immutable.Map[String,String]] \u003d Map(1 -\u003e Map(X -\u003e Y))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592402382_562759608",
+      "id": "20200121-164002_2088027859",
+      "dateCreated": "2020-01-21 16:40:02.382",
+      "dateStarted": "2020-01-21 16:40:27.196",
+      "dateFinished": "2020-01-21 16:40:27.472",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import Array._\nvar myArray \u003d range(5, 20, 2)\n\nobject MapExample{\ndef getMax(): Int \u003d {\n    //가장 큰 엘리먼트를 찾는다.\n    var max \u003d myArray(0)\n    for(i \u003c- 1 to (myArray.length - 1)){\n        if (myArray(i) \u003e max)\n            max \u003d myArray(i)\n    }\n    max\n}\n\ndef main(args: Array[String]){\n    val captials \u003d Map(\"Ireland\" -\u003e \"Dublin\", \"Britain\" -\u003e \"London\" , \"Germany\" -\u003e \"Berlin\")\n    \n    val temp:Map[Int, Int] \u003d Map()\n    val myMax \u003d Map(\"getMax\" -\u003e getMax())\n    println(\"My max is: \" + myMax)\n    \n    println(\"Keys in captials: \" + captials.keys)\n    println(\"Values in captials: \" + captials.values)\n    println(\"Check if captials is empty : \" + captials.isEmpty)\n    println(\"Check if temp is empty : \" + temp.isEmpty)\n    \n    val captials1 \u003d Map( \"Ireland\" -\u003e \"Dublin\", \"Turkey\" -\u003e \"Ankara\", \"Egypt\" -\u003e \"Cairo\")\n    val captials2 \u003d Map( \"Germany\" -\u003e \"Berlin\", \"Saudi Arabia\" -\u003e \"Riyadh\")\n    \n    //++ 연산자를 이용해 2개의 맵을 하나로 합친다.\n    var capitalsConcatenated \u003d captials1 ++ captials2\n    println(\"captials1 ++ captials2: \" + capitalsConcatenated)\n    \n    //++ 연산자를 메소드로 사용해 2개의 맵을 하나로 합친다.\n    capitalsConcatenated \u003d captials1.++(captials2)\n        println(\"captials1.++(captials2)): \" + capitalsConcatenated)\n\n}\n}",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:51:45.332",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import Array._\r\nmyArray: Array[Int] \u003d Array(5, 7, 9, 11, 13, 15, 17, 19)\r\ndefined object MapExample\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592427157_-456932053",
+      "id": "20200121-164027_589159692",
+      "dateCreated": "2020-01-21 16:40:27.157",
+      "dateStarted": "2020-01-21 16:51:45.368",
+      "dateFinished": "2020-01-21 16:51:46.219",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "MapExample.main(Array(\"start\"))",
+      "user": "anonymous",
+      "dateUpdated": "2020-01-21 16:52:05.532",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "My max is: Map(getMax -\u003e 19)\r\nKeys in captials: Set(Ireland, Britain, Germany)\r\nValues in captials: MapLike(Dublin, London, Berlin)\r\nCheck if captials is empty : false\r\nCheck if temp is empty : true\r\ncaptials1 ++ captials2: Map(Saudi Arabia -\u003e Riyadh, Egypt -\u003e Cairo, Ireland -\u003e Dublin, Turkey -\u003e Ankara, Germany -\u003e Berlin)\r\ncaptials1.++(captials2)): Map(Saudi Arabia -\u003e Riyadh, Egypt -\u003e Cairo, Ireland -\u003e Dublin, Turkey -\u003e Ankara, Germany -\u003e Berlin)\r\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1579592730486_-1874730876",
+      "id": "20200121-164530_717123768",
+      "dateCreated": "2020-01-21 16:45:30.486",
+      "dateStarted": "2020-01-21 16:52:05.567",
+      "dateFinished": "2020-01-21 16:52:05.822",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1579593114849_-738272104",
+      "id": "20200121-165154_1331256986",
+      "dateCreated": "2020-01-21 16:51:54.850",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Scala and Spark for Big Data Analytics/chapter4/chap4",
+  "id": "2F1V33FJN",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
